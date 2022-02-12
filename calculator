@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>calcul</title>
+    <?php
+    $n1=($_POST['num1']);
+    $n2=($_POST['num2']);
+    $oper=($_POST['op']);
+    if($oper=="+")
+    $res=$n1+$n2;
+    elseif($oper=="-")
+    $res=$n1-$n2;
+    elseif($oper=="*")
+    $res=$n1*$n2;
+    elseif($oper=="/")
+    $res=$n1/$n2;
+     ?>
+    <style>
+      .sub {
+        background-color:CDDEFF;
+        font-size: 1.2em;
+
+      }
+      .tab {
+        margin-left:5.6%;
+      }
+      .sub {
+        width: 40px;
+        height: 30px;
+      }
+      h1 {
+          border-radius: 3px solid red;
+      }
+      body {
+          margin-left: 40%;
+          border-bottom
+          
+          : 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>calculator</h1>
+    <form action="" method="post">
+      <table>
+        <tr>
+          <td><label><strong>number 1:</strong></label></td>
+          <td><input type="number" name="num1" value=""></td>
+        </tr>
+        <tr>
+          <td><label><strong>number 2:</strong> </label></td>
+          <td><input type="number" name="num2" value=""></td>
+        </tr>
+        </table>
+        <table class="tab">
+        <tr>
+          <td><input class="sub" type="submit" name="op" value="+"/></td>
+          <td><input class="sub" type="submit" name="op" value="-"/> <td>
+          <td><input class="sub" type="submit" name="op" value="*"/></td>
+          <td><input class="sub" type="submit" name="op" value="/"/></td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td><label><strong>RESULT :</strong> </label></td>
+          <td><input type="number" name="" value="<?php echo $res; ?>"> </td>
+        </tr>
+      </table>
+    </form>
+    
+  </body>
+</html>
